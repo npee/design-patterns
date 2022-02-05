@@ -4,17 +4,17 @@ public class Main {
 	public static void main(String[] args) {
 		MallardDuck mallardDuck = new MallardDuck();
 		mallardDuck.display();
-		// mallardDuck.fly();
+		mallardDuck.flyBehavior.fly();
 		mallardDuck.quack();
 
 		RedHeadDuck redheadDuck = new RedHeadDuck();
 		redheadDuck.display();
-		// redheadDuck.fly();
+		redheadDuck.flyBehavior.fly();
 		redheadDuck.quack();
 
 		RubberDuck rubberDuck = new RubberDuck();
 		rubberDuck.display();
-		// rubberDuck.fly();
+		rubberDuck.flyBehavior.fly();
 		rubberDuck.quack();
 	}
 }
