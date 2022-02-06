@@ -5,16 +5,16 @@ public class Main {
 		MallardDuck mallardDuck = new MallardDuck();
 		mallardDuck.display();
 		mallardDuck.flyBehavior.fly();
-		mallardDuck.quack();
+		mallardDuck.quackBehavior.quack();
 
 		RedHeadDuck redheadDuck = new RedHeadDuck();
 		redheadDuck.display();
 		redheadDuck.flyBehavior.fly();
-		redheadDuck.quack();
+		redheadDuck.quackBehavior.quack();
 
 		RubberDuck rubberDuck = new RubberDuck();
 		rubberDuck.display();
 		rubberDuck.flyBehavior.fly();
-		rubberDuck.quack();
+		rubberDuck.quackBehavior.quack();
 	}
 }

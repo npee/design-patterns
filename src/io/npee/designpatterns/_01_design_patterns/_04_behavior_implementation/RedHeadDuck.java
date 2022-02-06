@@ -4,10 +4,7 @@ public class RedHeadDuck extends Duck {
 
 	public RedHeadDuck() {
 		flyBehavior = new FlyWithWings();
-	}
-
-	public void quack() {
-		System.out.println("Quack");
+		quackBehavior = new Quack();
 	}
 
 	@Override
