@@ -8,5 +8,11 @@ public abstract class Duck {
 	void swim() {
 		System.out.println("The duck swims");
 	}
+	void performFly() {
+		this.flyBehavior.fly();
+	}
+	void performQuack() {
+		this.quackBehavior.quack();
+	}
 	abstract void display();
 }
