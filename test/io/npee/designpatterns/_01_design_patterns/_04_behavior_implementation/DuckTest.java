@@ -7,12 +7,16 @@ import org.junit.jupiter.api.Test;
 class DuckTest {
 
 	@Test
-	void mallardDuck() {
+	void duckTest() {
 		Duck mallardDuck = new MallardDuck();
-		mallardDuck.display();
-		mallardDuck.performFly();
-		mallardDuck.performQuack();
+		Duck redheadDuck = new RedHeadDuck();
+		Duck rubberDuck = new RubberDuck();
+
 		assertInstanceOf(FlyWithWings.class, mallardDuck.flyBehavior);
 		assertInstanceOf(Quack.class, mallardDuck.quackBehavior);
+		assertInstanceOf(FlyWithWings.class, redheadDuck.flyBehavior);
+		assertInstanceOf(Quack.class, redheadDuck.quackBehavior);
+		assertInstanceOf(FlyNoWay.class, rubberDuck.flyBehavior);
+		assertInstanceOf(Squeak.class, rubberDuck.quackBehavior);
 	}
 }
