@@ -15,4 +15,13 @@ class RoboDuckTest {
 		assertInstanceOf(FlyNoWay.class, roboDuck.flyBehavior);
 		assertInstanceOf(MuteQuack.class, roboDuck.quackBehavior);
 	}
+
+	@Test
+	void rocketPoweredRoboDuckTest() {
+		Duck roboDuck = new RoboDuck();
+
+		roboDuck.setFlyBehavior(new FlyRocketPowered());
+		roboDuck.performFly();
+		assertInstanceOf(FlyRocketPowered.class, roboDuck.flyBehavior);
+	}
 }
