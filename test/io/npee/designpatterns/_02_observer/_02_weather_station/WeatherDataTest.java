@@ -38,4 +38,18 @@ class WeatherDataTest {
 		assertEquals(78.0f, statisticsDisplay.getMinTemperature());
 		assertEquals(forecastDisplay.getCurrentPressure(), forecastDisplay.getLastPressure());
 	}
+
+	@Test
+	void heatIndexTest() {
+		WeatherData weatherData = new WeatherData();
+
+		HeatIndexDisplay heatIndexDisplay = new HeatIndexDisplay(weatherData);
+
+		weatherData.setMeasurements(80, 65, 30.4f);
+		assertEquals(82.95535f, heatIndexDisplay.getHeatIndex());
+		weatherData.setMeasurements(82, 70, 29.2f);
+		assertEquals(86.90124f, heatIndexDisplay.getHeatIndex());
+		weatherData.setMeasurements(78, 90, 29.2f);
+		assertEquals(83.64967f, heatIndexDisplay.getHeatIndex());
+	}
 }
