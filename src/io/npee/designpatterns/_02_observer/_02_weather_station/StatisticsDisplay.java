@@ -15,7 +15,7 @@ public class StatisticsDisplay implements Observer, DisplayElement {
 
 	@Override
 	public void display() {
-		System.out.println("평균/최대/최소 기온 -> " + (temperatureSum / numReadings) + " / " + maxTemperature + " / " + minTemperature);
+		System.out.println("평균/최대/최소 기온 -> " + (temperatureSum / numReadings) + "F / " + maxTemperature + "F / " + minTemperature + "F");
 	}
 
 	@Override
