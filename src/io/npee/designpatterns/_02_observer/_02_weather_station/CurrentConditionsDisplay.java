@@ -22,4 +22,12 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
 		this.humidity = humidity;
 		display();
 	}
+
+	public float getTemperature() {
+		return temperature;
+	}
+
+	public float getHumidity() {
+		return humidity;
+	}
 }

@@ -29,4 +29,12 @@ public class ForecastDisplay implements Observer, DisplayElement {
 		currentPressure = pressure;
 		display();
 	}
+
+	public float getCurrentPressure() {
+		return currentPressure;
+	}
+
+	public float getLastPressure() {
+		return lastPressure;
+	}
 }

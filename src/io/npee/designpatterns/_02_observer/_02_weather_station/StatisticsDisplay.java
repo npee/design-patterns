@@ -33,4 +33,20 @@ public class StatisticsDisplay implements Observer, DisplayElement {
 
 		display();
 	}
+
+	public float getMaxTemperature() {
+		return maxTemperature;
+	}
+
+	public float getMinTemperature() {
+		return minTemperature;
+	}
+
+	public float getTemperatureSum() {
+		return temperatureSum;
+	}
+
+	public int getNumReadings() {
+		return numReadings;
+	}
 }
