@@ -9,10 +9,8 @@ public class ForecastDisplay implements Observer, DisplayElement {
 
 	private float currentPressure = 29.92f;
 	private float lastPressure;
-	private Observable weatherData;
 
 	public ForecastDisplay(Observable weatherData) {
-		this.weatherData = weatherData;
 		weatherData.addObserver(this);
 	}
 

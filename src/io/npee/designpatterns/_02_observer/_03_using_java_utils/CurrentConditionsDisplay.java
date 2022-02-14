@@ -4,16 +4,13 @@ import java.util.Observable;
 import java.util.Observer;
 
 import io.npee.designpatterns._02_observer._02_weather_station.DisplayElement;
-import io.npee.designpatterns._02_observer._02_weather_station.Subject;
 
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
 
 	private float temperature;
 	private float humidity;
-	private Observable weatherData;
 
 	public CurrentConditionsDisplay(Observable weatherData) {
-		this.weatherData = weatherData;
 		weatherData.addObserver(this);
 	}
 
