@@ -48,15 +48,15 @@ public class WeatherData implements Subject {
 		measurementsChanged();
 	}
 
-	public double getTemperature() {
+	public float getTemperature() {
 		return temperature;
 	}
 
-	public double getHumidity() {
+	public float getHumidity() {
 		return humidity;
 	}
 
-	public double getPressure() {
+	public float getPressure() {
 		return pressure;
 	}
 }
