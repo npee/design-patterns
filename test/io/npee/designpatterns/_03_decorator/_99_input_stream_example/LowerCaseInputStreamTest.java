@@ -14,10 +14,12 @@ class LowerCaseInputStreamTest {
 	void test() {
 		int c;
 		StringBuilder res = new StringBuilder();
+		ClassLoader loader = LowerCaseInputStreamTest.class.getClassLoader();
+		String path = loader.getResource("decorator/test.txt").getFile();
 		try {
 			LowerCaseInputStream in = new LowerCaseInputStream(
 				new BufferedInputStream(
-					new FileInputStream("/Users/npee/github/design-patterns/src/io/npee/designpatterns/_03_decorator/_99_input_stream_example/test.txt")
+					new FileInputStream(path)
 				)
 			);
 
