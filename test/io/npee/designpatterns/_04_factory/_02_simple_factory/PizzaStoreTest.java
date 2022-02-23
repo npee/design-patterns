@@ -11,7 +11,7 @@ class PizzaStoreTest {
 
 	@BeforeEach
 	void init() {
-		pizzaStore = new PizzaStore();
+		pizzaStore = new PizzaStore(new SimplePizzaFactory());
 	}
 
 	@Test
