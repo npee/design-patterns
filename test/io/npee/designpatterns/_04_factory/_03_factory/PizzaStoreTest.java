@@ -12,4 +12,12 @@ class PizzaStoreTest {
 		Pizza pizza = nyPizzaStore.orderPizza("cheese");
 		assertInstanceOf(NYStyleCheesePizza.class, pizza);
 	}
+
+	@Test
+	void orderChicagoPizzaTest() {
+		ChicagoPizzaStore store = new ChicagoPizzaStore();
+		Pizza pizza = store.orderPizza("clam");
+		assertInstanceOf(ChicagoStyleClamPizza.class, pizza);
+	}
+
 }
