@@ -20,4 +20,16 @@ class PizzaStoreTest {
 		assertInstanceOf(ChicagoStyleClamPizza.class, pizza);
 	}
 
+	@Test
+	void createPizza() {
+		PizzaStore nyPizzaStore = new NYPizzaStore();
+		PizzaStore chicagoPizzaStore = new ChicagoPizzaStore();
+
+		Pizza nyCheesePizza = nyPizzaStore.orderPizza("cheese");
+		assertInstanceOf(Pizza.class, nyCheesePizza);
+
+		Pizza chicagoCheesePizza = chicagoPizzaStore.orderPizza("cheese");
+		assertInstanceOf(Pizza.class, chicagoCheesePizza);
+	}
+
 }
