@@ -6,19 +6,14 @@ import java.util.List;
 public abstract class Pizza {
 
 	String name;
-	String dough;
-	String sauce;
-	List<String> toppings = new ArrayList<>();
+	Dough dough;
+	Sauce sauce;
+	Veggies[] veggies;
+	Cheese cheese;
+	Pepperoni pepperoni;
+	Clams clam;
 
-	public void prepare() {
-		System.out.println(name + " 준비");
-		System.out.println(dough + " 반죽 던지기");
-		System.out.println(sauce + " 추가");
-		System.out.println("토핑 추가 ->");
-		for (String topping : toppings) {
-			System.out.println("\t" + topping);
-		}
-	}
+	abstract void prepare();
 
 	public void bake() {
 		System.out.println("350도에서 25분동안 굽기");
@@ -34,5 +29,14 @@ public abstract class Pizza {
 
 	public String getName() {
 		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Pizza name: '" + name + "'";
 	}
 }
