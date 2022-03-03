@@ -5,6 +5,10 @@ public class ChicagoPizzaStore extends PizzaStore {
 	Pizza pizza = null;
 	PizzaIngredientFactory ingredientFactory;
 
+	public ChicagoPizzaStore() {
+		this.ingredientFactory = new ChicagoPizzaIngredientFactory();
+	}
+
 	@Override
 	Pizza createPizza(String type) {
 		if (type.equals("cheese")) {
