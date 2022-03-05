@@ -17,15 +17,4 @@ class ChocolateBoilerTest {
 		boiler2.drain();
 		assertThrows(IllegalStateException.class, () -> boiler1.drain());
 	}
-
-	private void checkStatus(Object unknownBoiler) {
-		String empty = null;
-		String boiled = null;
-		if (unknownBoiler instanceof ThreadUnsafeChocolateBoiler) {
-			ThreadUnsafeChocolateBoiler boiler = (ThreadUnsafeChocolateBoiler) unknownBoiler;
-			empty = boiler.isEmpty() ? " empty" : " not empty";
-			boiled = boiler.isBoiled() ? " boiled." : " not boiled.";
-		}
-		System.out.println("Boiler is" + empty + " and" + boiled);
-	}
 }
