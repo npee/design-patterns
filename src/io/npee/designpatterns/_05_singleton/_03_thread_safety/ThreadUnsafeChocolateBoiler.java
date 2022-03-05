@@ -1,6 +1,6 @@
 package io.npee.designpatterns._05_singleton._03_thread_safety;
 
-public class ThreadUnsafeChocolateBoiler extends Thread {
+public class ThreadUnsafeChocolateBoiler {
 
 	private static ThreadUnsafeChocolateBoiler uniqueInstance;
 
