@@ -1,5 +1,7 @@
 package io.npee.designpatterns._05_singleton._03_thread_safety;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
@@ -12,13 +14,16 @@ public class ChocolateBoilerThreadTest {
 		ThreadSafeChocolateBoilerV1 boiler = ThreadSafeChocolateBoilerV1.getInstance();
 		Thread thread = new Thread(boiler);
 		thread.run();
+		assertTrue(boiler.isEmpty());
+		assertFalse(boiler.isBoiled());
 	}
 
 	@Test
 	void threadSafeTestV1_thread2() throws InterruptedException {
-		Thread.sleep(1000);
 		ThreadSafeChocolateBoilerV1 boiler = ThreadSafeChocolateBoilerV1.getInstance();
 		Thread thread = new Thread(boiler);
 		thread.run();
+		assertTrue(boiler.isEmpty());
+		assertFalse(boiler.isBoiled());
 	}
 }

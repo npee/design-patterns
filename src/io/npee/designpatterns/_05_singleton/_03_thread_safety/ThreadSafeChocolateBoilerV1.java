@@ -12,7 +12,7 @@ public class ThreadSafeChocolateBoilerV1 extends Thread {
 		this.boiled = false;
 	}
 
-	public static ThreadSafeChocolateBoilerV1 getInstance() {
+	public static synchronized ThreadSafeChocolateBoilerV1 getInstance() {
 		if (uniqueInstance == null) {
 			System.out.println("새로운 인스턴스");
 			uniqueInstance = new ThreadSafeChocolateBoilerV1();
@@ -69,12 +69,14 @@ public class ThreadSafeChocolateBoilerV1 extends Thread {
 
 	@Override
 	public void run() {
-		try {
-			fill();
-			boil();
-			drain();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+		synchronized (uniqueInstance) {
+			try {
+				fill();
+				boil();
+				drain();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }
