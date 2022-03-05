@@ -19,7 +19,7 @@ public class ChocolateBoilerThreadTest {
 	}
 
 	@Test
-	void threadSafeTestV1_thread2() throws InterruptedException {
+	void threadSafeTestV1_thread2() {
 		ThreadSafeChocolateBoilerV1 boiler = ThreadSafeChocolateBoilerV1.getInstance();
 		Thread thread = new Thread(boiler);
 		thread.run();
