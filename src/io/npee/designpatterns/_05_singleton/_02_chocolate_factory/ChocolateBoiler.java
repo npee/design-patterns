@@ -2,12 +2,23 @@ package io.npee.designpatterns._05_singleton._02_chocolate_factory;
 
 public class ChocolateBoiler {
 
+	private static ChocolateBoiler uniqueInstance;
+
 	private boolean empty;
 	private boolean boiled;
 
-	public ChocolateBoiler() {
+	private ChocolateBoiler() {
 		this.empty = true;
 		this.boiled = false;
+	}
+
+	public static ChocolateBoiler getInstance() {
+		if (uniqueInstance == null) {
+			System.out.println("새로운 인스턴스");
+			uniqueInstance = new ChocolateBoiler();
+		}
+		System.out.println("인스턴스 반환");
+		return uniqueInstance;
 	}
 
 	public void fill() {
