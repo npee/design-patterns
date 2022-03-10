@@ -16,4 +16,17 @@ class SimpleRemoteControlTest {
 		rc.buttonPressed();
 	}
 
+	@Test
+	void garageDoorOpenTest() {
+		SimpleRemoteControl rc = new SimpleRemoteControl();
+		Light light = new Light();
+		GarageDoor garageDoor = new GarageDoor();
+		LightOnCommand lightOn = new LightOnCommand(light);
+		GarageDoorOpenCommand garageDoorOpen = new GarageDoorOpenCommand(garageDoor);
+
+		rc.setCommand(lightOn);
+		rc.buttonPressed();
+		rc.setCommand(garageDoorOpen);
+		rc.buttonPressed();
+	}
 }
