@@ -29,8 +29,6 @@ public class Stereo {
 	}
 
 	public void setVolume(int volume) {
-		// code to set the volume
-		// valid range: 1-11 (after all 11 is better than 10, right?)
-		System.out.println(location + "볼륨 " + volume + " 설정");
+		System.out.println(location + " 볼륨 " + volume + " 설정");
 	}
 }

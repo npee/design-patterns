@@ -2,6 +2,12 @@ package io.npee.designpatterns._06_command._03_home_automation;
 
 public class GarageDoor {
 
+	String location;
+
+	public GarageDoor(String location) {
+		this.location = location;
+	}
+
 	public void up() {
 		System.out.println("차고 문 열림");
 	}

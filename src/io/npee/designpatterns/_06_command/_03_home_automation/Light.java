@@ -2,6 +2,12 @@ package io.npee.designpatterns._06_command._03_home_automation;
 
 public class Light {
 
+	String location;
+
+	public Light(String location) {
+		this.location = location;
+	}
+
 	public void on() {
 		System.out.println("불 켜짐");
 	}
