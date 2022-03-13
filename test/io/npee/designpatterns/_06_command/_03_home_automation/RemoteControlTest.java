@@ -7,6 +7,26 @@ import org.junit.jupiter.api.Test;
 class RemoteControlTest {
 
 	@Test
+	void undoTest() {
+		RemoteControl remoteControl = new RemoteControl();
+
+		Light livingRoomLight = new Light("거실");
+
+		LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
+		LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
+
+		remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
+
+		System.out.println(remoteControl);
+
+		remoteControl.onButtonWasPushed(0);
+		remoteControl.offButtonWasPushed(0);
+		remoteControl.undoButtonWasPushed();
+
+		System.out.println(remoteControl);
+	}
+
+	@Test
 	void remoteControlTest() {
 		RemoteControl remoteControl = new RemoteControl();
 
