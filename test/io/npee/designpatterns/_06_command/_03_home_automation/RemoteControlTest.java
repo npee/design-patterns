@@ -7,6 +7,41 @@ import org.junit.jupiter.api.Test;
 class RemoteControlTest {
 
 	@Test
+	void undoTest2() {
+		RemoteControl remoteControl = new RemoteControl();
+
+		CeilingFan ceilingFan = new CeilingFan("거실");
+
+		CeilingFanHighCommand setHigh = new CeilingFanHighCommand(ceilingFan);
+		CeilingFanMediumCommand setMedium = new CeilingFanMediumCommand(ceilingFan);
+		CeilingFanLowCommand setLow = new CeilingFanLowCommand(ceilingFan);
+		CeilingFanOffCommand setOff = new CeilingFanOffCommand(ceilingFan);
+
+		remoteControl.setCommand(0, setLow, setOff);
+		remoteControl.setCommand(1, setMedium, setOff);
+		remoteControl.setCommand(2, setHigh, setOff);
+
+		System.out.println(remoteControl);
+
+		remoteControl.onButtonWasPushed(0);
+		remoteControl.offButtonWasPushed(0);
+		remoteControl.undoButtonWasPushed();
+
+		System.out.println(remoteControl);
+
+		remoteControl.onButtonWasPushed(1);
+		remoteControl.offButtonWasPushed(1);
+		remoteControl.undoButtonWasPushed();
+
+		System.out.println(remoteControl);
+
+		remoteControl.onButtonWasPushed(2);
+		remoteControl.undoButtonWasPushed();
+		remoteControl.offButtonWasPushed(2);
+		remoteControl.undoButtonWasPushed();
+	}
+
+	@Test
 	void undoTest() {
 		RemoteControl remoteControl = new RemoteControl();
 
