@@ -1,8 +1,22 @@
 package io.npee.designpatterns._06_command._04_home_automation_macro._03_home_automation;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
+
+import io.npee.designpatterns._06_command._04_home_automation_macro.Command;
+import io.npee.designpatterns._06_command._04_home_automation_macro.Hottub;
+import io.npee.designpatterns._06_command._04_home_automation_macro.HottubOffCommand;
+import io.npee.designpatterns._06_command._04_home_automation_macro.HottubOnCommand;
+import io.npee.designpatterns._06_command._04_home_automation_macro.Light;
+import io.npee.designpatterns._06_command._04_home_automation_macro.LightOffCommand;
+import io.npee.designpatterns._06_command._04_home_automation_macro.LightOnCommand;
+import io.npee.designpatterns._06_command._04_home_automation_macro.MacroCommand;
+import io.npee.designpatterns._06_command._04_home_automation_macro.RemoteControl;
+import io.npee.designpatterns._06_command._04_home_automation_macro.Stereo;
+import io.npee.designpatterns._06_command._04_home_automation_macro.StereoOffCommand;
+import io.npee.designpatterns._06_command._04_home_automation_macro.StereoOnCommand;
+import io.npee.designpatterns._06_command._04_home_automation_macro.TV;
+import io.npee.designpatterns._06_command._04_home_automation_macro.TVOffCommand;
+import io.npee.designpatterns._06_command._04_home_automation_macro.TVOnCommand;
 
 class RemoteControlTest {
 
