@@ -1,6 +1,4 @@
-package io.npee.designpatterns._09_templatemethod._04_sort_ducks;
-
-import static org.junit.jupiter.api.Assertions.*;
+package io.npee.designpatterns._09_templatemethod._04_arrays_sort;
 
 import java.util.Arrays;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package io.npee.designpatterns._09_templatemethod._04_sort_ducks;
+package io.npee.designpatterns._09_templatemethod._04_arrays_sort;
 
 public class Duck implements Comparable {
 
