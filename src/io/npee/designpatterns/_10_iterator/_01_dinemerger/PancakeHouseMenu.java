@@ -10,7 +10,7 @@ public class PancakeHouseMenu {
     public PancakeHouseMenu() {
         menuItems = new ArrayList<>();
 
-        addItem("K&B 팬케이으 아침 세트",
+        addItem("K&B 팬케이크 아침 세트",
                 "스크램블드 에그와 토스트가 곁들어진 팬케이크",
                 true,
                 2.99);
