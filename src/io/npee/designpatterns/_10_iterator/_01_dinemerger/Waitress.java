@@ -13,20 +13,20 @@ public class Waitress {
     }
 
     public void printMenu() {
-        MenuItem[] dinerMenuItems = dinerMenu.getMenuItems();
-        List<MenuItem> pancakeHouseMenuItems = pancakeHouseMenu.getMenuItems();
+        MenuItem[] lunchItems = dinerMenu.getMenuItems();
+        List<MenuItem> breakfastItems = pancakeHouseMenu.getMenuItems();
 
         System.out.println("MENU\n----\nBREAKFAST");
-        for (MenuItem dinerMenuItem : dinerMenuItems) {
-            System.out.print(dinerMenuItem.getName() + " ");
-            System.out.println(dinerMenuItem.getPrice() + " ");
-            System.out.println(dinerMenuItem.getDescription());
+        for (MenuItem menuItem : breakfastItems) {
+            System.out.print(menuItem.getName() + " ");
+            System.out.println(menuItem.getPrice() + " ");
+            System.out.println(menuItem.getDescription());
         }
         System.out.println("\nLUNCH");
-        for (MenuItem pancakeHouseMenuItem : pancakeHouseMenuItems) {
-            System.out.print(pancakeHouseMenuItem.getName() + " ");
-            System.out.println(pancakeHouseMenuItem.getPrice() + " ");
-            System.out.println(pancakeHouseMenuItem.getDescription());
+        for (MenuItem menuItem : lunchItems) {
+            System.out.print(menuItem.getName() + " ");
+            System.out.println(menuItem.getPrice() + " ");
+            System.out.println(menuItem.getDescription());
         }
     }
 }
