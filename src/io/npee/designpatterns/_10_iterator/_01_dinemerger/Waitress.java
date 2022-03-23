@@ -43,6 +43,7 @@ public class Waitress {
             System.out.println(menuItem.getPrice() + " ");
             System.out.println(menuItem.getDescription());
         }
+        System.out.println("\nLUNCH");
         while(lunchItemsIterator.hasNext()) {
             MenuItem menuItem = lunchItemsIterator.next();
             System.out.print(menuItem.getName() + " ");

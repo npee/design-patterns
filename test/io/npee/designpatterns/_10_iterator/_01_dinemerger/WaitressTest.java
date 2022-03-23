@@ -17,4 +17,14 @@ class WaitressTest {
         waitress.printMenu();
     }
 
+    @Test
+    void waitressIteratorTest() {
+
+        DinerMenu dinerMenu = new DinerMenu();
+        PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
+
+        Waitress waitress = new Waitress(dinerMenu, pancakeHouseMenu);
+
+        waitress.printMenuWithIterator();
+    }
 }
