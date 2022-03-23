@@ -1,5 +1,7 @@
 package io.npee.designpatterns._10_iterator._01_dinemerger;
 
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class Waitress {
@@ -28,5 +30,25 @@ public class Waitress {
             System.out.println(menuItem.getPrice() + " ");
             System.out.println(menuItem.getDescription());
         }
+    }
+
+    public void printMenuWithIterator() {
+        Iterator<MenuItem> lunchItemsIterator = Arrays.stream(dinerMenu.getMenuItems()).iterator();
+        Iterator<MenuItem> breakfastItemsIterator = pancakeHouseMenu.getMenuItems().iterator();
+
+        System.out.println("MENU\n----\nBREAKFAST");
+        while (breakfastItemsIterator.hasNext()) {
+            MenuItem menuItem = breakfastItemsIterator.next();
+            System.out.print(menuItem.getName() + " ");
+            System.out.println(menuItem.getPrice() + " ");
+            System.out.println(menuItem.getDescription());
+        }
+        while(lunchItemsIterator.hasNext()) {
+            MenuItem menuItem = lunchItemsIterator.next();
+            System.out.print(menuItem.getName() + " ");
+            System.out.println(menuItem.getPrice() + " ");
+            System.out.println(menuItem.getDescription());
+        }
+
     }
 }
