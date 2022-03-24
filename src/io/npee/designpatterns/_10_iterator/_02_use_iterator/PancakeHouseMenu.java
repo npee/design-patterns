@@ -38,8 +38,8 @@ public class PancakeHouseMenu {
         menuItems.add(menuItem);
     }
 
-    public List<MenuItem> getMenuItems() {
-        return menuItems;
+    public CustomIterator createIterator() {
+        return new PancakeHouseMenuIterator(menuItems);
     }
 
     public String toString() {

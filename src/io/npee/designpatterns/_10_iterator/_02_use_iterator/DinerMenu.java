@@ -37,8 +37,8 @@ public class DinerMenu {
         }
     }
 
-    public MenuItem[] getMenuItems() {
-        return menuItems;
+    public CustomIterator createIterator() {
+        return new DinerMenuIterator(menuItems);
     }
 
 }
