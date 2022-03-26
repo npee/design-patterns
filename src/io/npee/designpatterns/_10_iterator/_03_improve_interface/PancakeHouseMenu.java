@@ -1,6 +1,7 @@
 package io.npee.designpatterns._10_iterator._03_improve_interface;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class PancakeHouseMenu {
@@ -38,7 +39,7 @@ public class PancakeHouseMenu {
         menuItems.add(menuItem);
     }
 
-    public CustomIterator createIterator() {
+    public Iterator createIterator() {
         return new PancakeHouseMenuIterator(menuItems);
     }
 

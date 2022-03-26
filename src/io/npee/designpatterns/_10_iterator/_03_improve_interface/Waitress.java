@@ -1,6 +1,8 @@
 package io.npee.designpatterns._10_iterator._03_improve_interface;
 
 
+import java.util.Iterator;
+
 public class Waitress {
 
     DinerMenu dinerMenu;
@@ -12,8 +14,8 @@ public class Waitress {
     }
 
     public void printMenu() {
-        CustomIterator breakfastIterator = pancakeHouseMenu.createIterator();
-        CustomIterator lunchIterator = dinerMenu.createIterator();
+        Iterator breakfastIterator = pancakeHouseMenu.createIterator();
+        Iterator lunchIterator = dinerMenu.createIterator();
 
         System.out.println("MENU\n----\nBREAKFAST");
         printMenu(breakfastIterator);
@@ -21,7 +23,7 @@ public class Waitress {
         printMenu(lunchIterator);
     }
 
-    public void printMenu(CustomIterator iterator) {
+    public void printMenu(Iterator iterator) {
         while (iterator.hasNext()) {
             MenuItem menuItem = (MenuItem) iterator.next();
             System.out.print(menuItem.getName() + " ");

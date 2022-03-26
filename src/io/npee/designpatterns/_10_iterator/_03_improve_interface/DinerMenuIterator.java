@@ -1,6 +1,8 @@
 package io.npee.designpatterns._10_iterator._03_improve_interface;
 
-public class DinerMenuIterator implements CustomIterator {
+import java.util.Iterator;
+
+public class DinerMenuIterator implements Iterator {
 
     MenuItem[] items;
     int position = 0;

@@ -1,8 +1,9 @@
 package io.npee.designpatterns._10_iterator._03_improve_interface;
 
+import java.util.Iterator;
 import java.util.List;
 
-public class PancakeHouseMenuIterator implements CustomIterator {
+public class PancakeHouseMenuIterator implements Iterator {
 
     List<MenuItem> items;
     int position = 0;

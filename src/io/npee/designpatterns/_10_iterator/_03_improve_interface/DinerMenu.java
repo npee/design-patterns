@@ -1,5 +1,7 @@
 package io.npee.designpatterns._10_iterator._03_improve_interface;
 
+import java.util.Iterator;
+
 public class DinerMenu {
 
     static final int MAX_ITEMS = 6;
@@ -37,7 +39,7 @@ public class DinerMenu {
         }
     }
 
-    public CustomIterator createIterator() {
+    public Iterator createIterator() {
         return new DinerMenuIterator(menuItems);
     }
 
