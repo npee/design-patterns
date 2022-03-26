@@ -5,10 +5,10 @@ import java.util.Iterator;
 
 public class Waitress {
 
-    DinerMenu dinerMenu;
-    PancakeHouseMenu pancakeHouseMenu;
+    Menu dinerMenu;
+    Menu pancakeHouseMenu;
 
-    public Waitress(DinerMenu dinerMenu, PancakeHouseMenu pancakeHouseMenu) {
+    public Waitress(Menu dinerMenu, Menu pancakeHouseMenu) {
         this.dinerMenu = dinerMenu;
         this.pancakeHouseMenu = pancakeHouseMenu;
     }

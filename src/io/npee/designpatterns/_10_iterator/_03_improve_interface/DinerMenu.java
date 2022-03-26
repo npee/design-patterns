@@ -2,7 +2,7 @@ package io.npee.designpatterns._10_iterator._03_improve_interface;
 
 import java.util.Iterator;
 
-public class DinerMenu {
+public class DinerMenu implements Menu {
 
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
@@ -39,6 +39,7 @@ public class DinerMenu {
         }
     }
 
+    @Override
     public Iterator createIterator() {
         return new DinerMenuIterator(menuItems);
     }
