@@ -1,9 +1,10 @@
 package io.npee.designpatterns._10_iterator._04_add_cafe_menu;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
-public class CafeMenu {
+public class CafeMenu implements Menu {
 
     HashMap<String, MenuItem> menuItems = new HashMap<String, MenuItem>();
 
@@ -26,7 +27,8 @@ public class CafeMenu {
         menuItems.put(name, menuItem);
     }
 
-    public Map<String, MenuItem> getItems() {
-        return menuItems;
+    @Override
+    public Iterator createIterator() {
+        return menuItems.values().iterator();
     }
 }
