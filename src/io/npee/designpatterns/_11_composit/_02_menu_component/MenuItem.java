@@ -1,6 +1,6 @@
 package io.npee.designpatterns._11_composit._02_menu_component;
 
-public class MenuItem {
+public class MenuItem implements MenuComponent {
 
     String name;
     String description;
@@ -18,22 +18,38 @@ public class MenuItem {
         this.price = price;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public String getDescription() {
         return description;
     }
 
+    @Override
     public double getPrice() {
         return price;
     }
 
+    @Override
     public boolean isVegetarian() {
         return vegetarian;
     }
+
+    @Override
     public String toString() {
         return (name + ", $" + price + "\n   " + description);
+    }
+
+    @Override
+    public void print() {
+        System.out.print(" " + getName());
+        if (isVegetarian()) {
+            System.out.print("(v)");
+        }
+        System.out.println(", " + getPrice());
+        System.out.println("     -- " + getDescription());
     }
 }
