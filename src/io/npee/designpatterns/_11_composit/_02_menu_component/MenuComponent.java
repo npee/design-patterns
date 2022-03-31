@@ -8,7 +8,7 @@ public interface MenuComponent {
     default void remove(MenuComponent menuComponent) {
         throw new UnsupportedOperationException();
     }
-    default MenuComponent getChild() {
+    default MenuComponent getChild(int i) {
         throw new UnsupportedOperationException();
     }
     default String getName() {
