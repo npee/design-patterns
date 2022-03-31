@@ -2,7 +2,7 @@ package io.npee.designpatterns._11_composit._02_menu_component;
 
 import java.util.Iterator;
 
-public class DinerMenu implements Menu {
+public class DinerMenu {
 
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
@@ -39,7 +39,6 @@ public class DinerMenu implements Menu {
         }
     }
 
-    @Override
     public Iterator createIterator() {
 //        return new DinerMenuIterator(menuItems);
         return new AlternatingDinerMenuIterator(menuItems);

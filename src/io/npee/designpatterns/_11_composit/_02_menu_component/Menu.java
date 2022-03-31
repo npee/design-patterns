@@ -17,12 +17,12 @@ public class Menu implements MenuComponent {
 
     @Override
     public void add(MenuComponent menuComponent) {
-        menuComponent.add(menuComponent);
+        menuComponents.add(menuComponent);
     }
 
     @Override
     public void remove(MenuComponent menuComponent) {
-        menuComponent.remove(menuComponent);
+        menuComponents.remove(menuComponent);
     }
 
     @Override

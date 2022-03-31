@@ -3,7 +3,7 @@ package io.npee.designpatterns._11_composit._02_menu_component;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class CafeMenu implements Menu {
+public class CafeMenu {
 
     HashMap<String, MenuItem> menuItems = new HashMap<String, MenuItem>();
 
@@ -26,7 +26,6 @@ public class CafeMenu implements Menu {
         menuItems.put(name, menuItem);
     }
 
-    @Override
     public Iterator createIterator() {
         return menuItems.values().iterator();
     }
