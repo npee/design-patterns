@@ -1,4 +1,4 @@
-package io.npee.designpatterns._11_composit._01_base;
+package io.npee.designpatterns._11_composit._02_menu_component;
 
 
 import java.util.Iterator;
