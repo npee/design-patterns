@@ -53,4 +53,8 @@ public class Menu implements MenuComponent {
         }
     }
 
+    @Override
+    public Iterator createIterator() {
+        return new CompositeIterator(menuComponents.iterator());
+    }
 }

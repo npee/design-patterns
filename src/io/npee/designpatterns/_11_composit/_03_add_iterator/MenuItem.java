@@ -1,5 +1,7 @@
 package io.npee.designpatterns._11_composit._03_add_iterator;
 
+import java.util.Iterator;
+
 public class MenuItem implements MenuComponent {
 
     String name;
@@ -51,5 +53,10 @@ public class MenuItem implements MenuComponent {
         }
         System.out.println(", " + getPrice());
         System.out.println("     -- " + getDescription());
+    }
+
+    @Override
+    public Iterator createIterator() {
+        return null;
     }
 }

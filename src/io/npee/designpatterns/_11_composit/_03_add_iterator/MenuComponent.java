@@ -1,5 +1,7 @@
 package io.npee.designpatterns._11_composit._03_add_iterator;
 
+import java.util.Iterator;
+
 public interface MenuComponent {
 
     default void add(MenuComponent menuComponent) {
@@ -26,4 +28,5 @@ public interface MenuComponent {
     default void print() {
         throw new UnsupportedOperationException();
     }
+    Iterator createIterator();
 }
