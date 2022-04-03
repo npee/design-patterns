@@ -57,6 +57,6 @@ public class MenuItem implements MenuComponent {
 
     @Override
     public Iterator createIterator() {
-        return null;
+        return new NullIterator();
     }
 }
