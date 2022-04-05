@@ -21,6 +21,13 @@ public class SoldState implements State {
     @Override
     public void turnCrank() {
         System.out.println("크랭크는 한 번만 움직여 주세요.");
+        gumballMachine.releaseBall();
+        if (gumballMachine.getCount() > 0) {
+            gumballMachine.setState(gumballMachine.getNoQuarterState());
+        } else {
+            System.out.println("풍선껌이 없습니다.");
+            gumballMachine.setState(gumballMachine.getSoldOutState());
+        }
     }
 
     @Override
