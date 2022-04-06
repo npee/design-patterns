@@ -71,6 +71,10 @@ public class GumballMachine {
         return soldState;
     }
 
+    public State getWinnerState() {
+        return winnerState;
+    }
+
     public State getState() {
         return state;
     }
