@@ -1,6 +1,8 @@
 package io.npee.designpatterns._13_proxy._02_rmi;
 
-public interface State {
+import java.io.Serializable;
+
+public interface State extends Serializable {
 
     void insertQuarter();
     void ejectQuarter();

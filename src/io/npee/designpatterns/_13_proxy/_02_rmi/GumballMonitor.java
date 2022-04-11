@@ -1,16 +1,22 @@
 package io.npee.designpatterns._13_proxy._02_rmi;
 
+import java.rmi.RemoteException;
+
 public class GumballMonitor {
 
-    GumballMachine gumballMachine;
+    GumballMachineRemote gumballMachine;
 
-    public GumballMonitor(GumballMachine gumballMachine) {
+    public GumballMonitor(GumballMachineRemote gumballMachine) {
         this.gumballMachine = gumballMachine;
     }
 
     public void report() {
-        System.out.println("Gumball Machine: " + gumballMachine.getLocation());
-        System.out.println("Current inventory: " + gumballMachine.getCount() + " gumballs");
-        System.out.println("Current state: " + gumballMachine.getState());
+        try {
+            System.out.println("Gumball Machine: " + gumballMachine.getLocation());
+            System.out.println("Current inventory: " + gumballMachine.getCount() + " gumballs");
+            System.out.println("Current state: " + gumballMachine.getState());
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 }

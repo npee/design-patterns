@@ -1,6 +1,8 @@
 package io.npee.designpatterns._13_proxy._02_rmi;
 
-public class GumballMachine {
+import java.rmi.RemoteException;
+
+public class GumballMachine implements GumballMachineRemote {
 
     State soldOutState;
     State noQuarterState;
@@ -11,6 +13,11 @@ public class GumballMachine {
 
     State state;
     int count = 0;
+
+    public GumballMachine(String location, int count) throws RemoteException {
+        this.location = location;
+        this.count = count;
+    }
 
     public GumballMachine(int numberGumballs, String location) {
         soldOutState = new SoldOutState(this);
@@ -49,7 +56,7 @@ public class GumballMachine {
         }
     }
 
-    int getCount() {
+    public int getCount() {
         return count;
     }
 
